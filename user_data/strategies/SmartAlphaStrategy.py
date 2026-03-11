@@ -43,7 +43,7 @@ class SmartAlphaStrategy(IStrategy):
     # Strategy metadata
     # ------------------------------------------------------------------
     INTERFACE_VERSION = 3
-    timeframe = "1h"
+    timeframe = "5m"
     can_short = False
     use_exit_signal = True
     exit_profit_only = False
@@ -53,10 +53,10 @@ class SmartAlphaStrategy(IStrategy):
     # ROI – fallback exits (time-based)
     # ------------------------------------------------------------------
     minimal_roi = {
-        "0": 0.10,    # 10 % at any time
-        "60": 0.05,   # 5 % after 60 minutes
-        "120": 0.03,  # 3 % after 120 minutes
-        "240": 0.01,  # 1 % after 240 minutes
+        "0": 0.03,    # 3 % at any time
+        "15": 0.015,  # 1.5 % after 15 minutes
+        "30": 0.01,   # 1 % after 30 minutes
+        "60": 0.005,  # 0.5 % after 60 minutes
     }
 
     # ------------------------------------------------------------------

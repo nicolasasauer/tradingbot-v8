@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  freqtrade:
+    image: freqtradeorg/freqtrade:stable
+    platform: linux/arm64
+    restart: unless-stopped
+    container_name: freqtrade
+    volumes:
+      - ./user_data:/freqtrade/user_data
+    ports:
+      - "8080:8080"
+    command: >
+      trade
+      --logfile /freqtrade/user_data/logs/freqtrade.log
+      --db-url sqlite:////freqtrade/user_data/tradesv3.sqlite
+      --config /freqtrade/user_data/config.json
+      --strategy SmartAlphaStrategy
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - freqtrade-network
+
+networks:
+  freqtrade-network:
+    driver: bridge

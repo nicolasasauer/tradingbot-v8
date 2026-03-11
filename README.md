@@ -37,7 +37,8 @@ mode so you can evaluate performance before risking real funds.
 6. [Self-Improvement (Hyperopt)](#self-improvement-hyperopt)
 7. [Web UI (FreqUI)](#web-ui-frequi)
 8. [Directory Structure](#directory-structure)
-9. [Useful Commands](#useful-commands)
+9. [Deploying from GHCR](#deploying-from-github-container-registry-ghcr)
+10. [Useful Commands](#useful-commands)
 
 ---
 
@@ -257,6 +258,35 @@ tradingbot-v8/
     ├── hyperopt_results/            # Hyperopt output
     └── plot/                        # Trade plot images
 ```
+
+---
+
+## Deploying from GitHub Container Registry (GHCR)
+
+The CI/CD pipeline automatically builds a multi-platform Docker image (linux/amd64 and
+linux/arm64) and pushes it to GitHub Container Registry on every push to `main`.
+
+### First-time login on your Raspberry Pi
+
+```bash
+# Authenticate with GHCR using a GitHub Personal Access Token (PAT).
+docker login ghcr.io -u <your-github-username>
+# Enter your GitHub Personal Access Token when prompted
+```
+
+> **Tip:** Generate a PAT at https://github.com/settings/tokens with at least
+> the `read:packages` scope. GitHub no longer supports password authentication
+> for registry access.
+
+### Pulling the latest image and restarting the bot
+
+```bash
+docker compose pull && docker compose up -d
+```
+
+This fetches the newest image from GHCR and restarts the container with zero
+manual intervention. Run this any time you push changes to the `main` branch
+and want the Raspberry Pi to pick them up.
 
 ---
 

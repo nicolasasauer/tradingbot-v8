@@ -2,7 +2,8 @@ version: "3.8"
 
 services:
   freqtrade:
-    image: freqtradeorg/freqtrade:stable
+    image: ghcr.io/nicolasasauer/tradingbot-v8:latest
+    pull_policy: always
     platform: linux/arm64
     restart: unless-stopped
     container_name: freqtrade

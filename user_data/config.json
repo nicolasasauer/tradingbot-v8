@@ -33,14 +33,13 @@
   },
   "exchange": {
     "name": "binance",
-    "key": "YOUR_BINANCE_API_KEY",
-    "secret": "YOUR_BINANCE_API_SECRET",
+    "key": "",
+    "secret": "",
     "ccxt_config": {},
     "ccxt_async_config": {},
     "pair_whitelist": [
       "BTC/USDT",
       "ETH/USDT",
-      "BNB/USDT",
       "SOL/USDT",
       "ADA/USDT"
     ],

@@ -29,16 +29,43 @@ mode so you can evaluate performance before risking real funds.
 
 ## Table of Contents
 
-1. [Architecture Overview](#architecture-overview)
-2. [Prerequisites](#prerequisites)
-3. [Quick Start (one command)](#quick-start)
-4. [Configuration](#configuration)
-5. [Strategy: SmartAlphaStrategy](#strategy-smartalphastrategy)
-6. [Self-Improvement (Hyperopt)](#self-improvement-hyperopt)
-7. [Web UI (FreqUI)](#web-ui-frequi)
-8. [Directory Structure](#directory-structure)
-9. [Deploying from GHCR](#deploying-from-github-container-registry-ghcr)
-10. [Useful Commands](#useful-commands)
+1. [Screenshots](#screenshots)
+2. [Architecture Overview](#architecture-overview)
+3. [Prerequisites](#prerequisites)
+4. [Quick Start (one command)](#quick-start)
+5. [Configuration](#configuration)
+6. [Strategy: SmartAlphaStrategy](#strategy-smartalphastrategy)
+7. [Self-Improvement (Hyperopt)](#self-improvement-hyperopt)
+8. [Web UI (FreqUI)](#web-ui-frequi)
+9. [Directory Structure](#directory-structure)
+10. [Deploying from GHCR](#deploying-from-github-container-registry-ghcr)
+11. [Useful Commands](#useful-commands)
+
+---
+
+## Screenshots
+
+> FreqUI runs directly in your browser at `http://<raspberry-pi-ip>:8080` once the bot is started.
+
+### Welcome Screen
+
+![FreqUI Welcome](docs/screenshots/frequi-welcome.png)
+
+### Trade View – Open & Closed Trades with Live Chart
+
+![FreqUI Trade View](docs/screenshots/frequi-trade.png)
+
+### Dashboard – Performance Overview
+
+![FreqUI Dashboard](docs/screenshots/frequi-dashboard.png)
+
+### Log Viewer – Real-time Bot Logs
+
+![FreqUI Logs](docs/screenshots/frequi-logs.png)
+
+### Backtesting Interface
+
+![FreqUI Backtesting](docs/screenshots/frequi-backtest.png)
 
 ---
 
@@ -238,6 +265,8 @@ The dashboard shows:
 - Performance metrics (win rate, profit factor, Sharpe ratio)
 - Live pair charts with indicator overlays
 - Bot status and log stream
+
+> See the [Screenshots](#screenshots) section above for a preview of the UI.
 
 ---
 

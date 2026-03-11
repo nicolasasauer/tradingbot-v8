@@ -41,11 +41,22 @@
       "BTC/USDT",
       "ETH/USDT",
       "SOL/USDT",
-      "ADA/USDT"
+      "BNB/USDT",
+      "XRP/USDT",
+      "ADA/USDT",
+      "DOGE/USDT",
+      "MATIC/USDT",
+      "DOT/USDT",
+      "LTC/USDT",
+      "AVAX/USDT",
+      "LINK/USDT",
+      "UNI/USDT",
+      "ATOM/USDT",
+      "ALGO/USDT",
+      "NEAR/USDT",
+      "ICP/USDT"
     ],
-    "pair_blacklist": [
-      "BNB/.*"
-    ]
+    "pair_blacklist": []
   },
   "pairlists": [
     {
@@ -70,6 +81,7 @@
     "password": "CHANGE_THIS_PASSWORD"
   },
   "bot_name": "SmartAlphaBot",
+  "timeframe": "5m",
   "initial_state": "running",
   "force_entry_enable": false,
   "internals": {
